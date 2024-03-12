@@ -72,10 +72,10 @@ Train:
   dataset:
     name: MultiScaleDataSet
     ds_width: false
-    data_dir: ./train_data/
+    data_dir: ./train_data/rec
     ext_op_transform_idx: 1
     label_file_list:
-    - ./train_data/train_list.txt
+    - ./train_data/rec/rec_gt_train.txt
     transforms:
     - DecodeImage:
         img_mode: BGR
@@ -121,9 +121,9 @@ Train:
 Eval:
   dataset:
     name: SimpleDataSet
-    data_dir: ./train_data
+    data_dir: ./train_data/rec
     label_file_list:
-    - ./train_data/val_list.txt
+    - ./train_data/rec/rec_gt_test.txt
     transforms:
     - DecodeImage:
         img_mode: BGR
